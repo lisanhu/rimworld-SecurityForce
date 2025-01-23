@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>PolarisShieldMemoryStick</defName>
+    <label>polaris memory stick</label>
+    <thingClass>ThingWithComps</thingClass>
+    <description>Used to be the Polarisbloc makes and sells Memory Sticks containing the shield manufacturing technology.\n\nNow the shield tech is publicly available. The memory stick will now send a message to Polarisbloc and you can choose some compensation.</description>
+    <graphicData>
+      <texPath>PolarisblocSF/Item/PolarisShieldMemoryStick</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <resourceReadoutPriority>Middle</resourceReadoutPriority>
+    <stackLimit>1</stackLimit>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MarketValue>800</MarketValue>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>0.3</Mass>
+    </statBases>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
+    <tradeability>All</tradeability>
+    <techLevel>Ultra</techLevel>
+    <comps>
+      <li Class="CompProperties_Usable">
+        <useJob>UseItem</useJob>
+        <useLabel>Unscramble memory stick</useLabel>
+      </li>
+      <li Class="Polarisbloc_SecurityForce.CompProperties_GenQuestInPoints">
+        <quest>PolarisMemoryStickQuest</quest>
+        <pointsOffset>-200~300</pointsOffset>
+        <minPoints>300</minPoints>
+      </li>
+      <!--<li Class="CompProperties_UseEffect"><compClass>CompUseEffect_DestroySelf</compClass></li>-->
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_UseEffectDestroySelf" />
+    </comps>
+    <tradeNeverStack>true</tradeNeverStack>
+  </ThingDef>
+  <QuestScriptDef>
+    <defName>PolarisMemoryStickQuest</defName>
+    <rootSelectionWeight>-1</rootSelectionWeight>
+    <rootMinPoints>300</rootMinPoints>
+    <expireDaysRange>3~4</expireDaysRange>
+    <questNameRules>
+      <rulesStrings>
+        <li>questName-&gt;Optional supplies</li>
+      </rulesStrings>
+    </questNameRules>
+    <questDescriptionRules>
+      <rulesStrings>
+        <li>questDescription-&gt;A list of supplies from headquarters, please select one you want.\n\nSupplies will be delivered immediately.</li>
+      </rulesStrings>
+    </questDescriptionRules>
+    <root Class="QuestNode_Sequence">
+      <nodes>
+        <li Class="QuestNode_SubScript">
+          <def>Util_RandomizePointsChallengeRating</def>
+          <parms>
+            <selectionWeightOneStar>0.75</selectionWeightOneStar>
+            <selectionWeightTwoStar>0.2</selectionWeightTwoStar>
+            <selectionWeightThreeStar>0.05</selectionWeightThreeStar>
+            <pointsFactorTwoStar>1.4</pointsFactorTwoStar>
+            <!-- Don't change points -->
+            <pointsFactorThreeStar>2.0</pointsFactorThreeStar>
+            <minPointsTwoStar>500</minPointsTwoStar>
+            <minPointsThreeStar>700</minPointsThreeStar>
+          </parms>
+        </li>
+        <!--<li Class="QuestNode_GetMap" />-->
+        <li Class="QuestNode_EvaluateSimpleCurve">
+          <value>$points</value>
+          <storeAs>pointsRewardFactor</storeAs>
+          <curve>
+            <points>
+              <li>300,  0.5</li>
+              <li>1000, 1.0</li>
+              <li>2400, 1.2</li>
+              <li>5000, 1.5</li>
+            </points>
+          </curve>
+        </li>
+        <li Class="QuestNode_Set">
+          <name>rewardValue</name>
+          <value>$($pointsRewardFactor * $points)</value>
+        </li>
+        <li Class="QuestNode_GiveRewards">
+          <parms>
+            <allowGoodwill>false</allowGoodwill>
+            <allowRoyalFavor>false</allowRoyalFavor>
+            <thingRewardRequired>true</thingRewardRequired>
+            <thingRewardItemsOnly>true</thingRewardItemsOnly>
+          </parms>
+        </li>
+        <li Class="QuestNode_End">
+          <outcome>Success</outcome>
+        </li>
+      </nodes>
+    </root>
+    <hideOnCleanup>true</hideOnCleanup>
+    <!--<defaultChallengeRating>3</defaultChallengeRating>-->
+  </QuestScriptDef>
+</Defs>
