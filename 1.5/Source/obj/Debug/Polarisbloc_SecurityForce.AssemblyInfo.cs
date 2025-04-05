@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Polarisbloc_SecurityForce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.1.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.1.0.0+d3c01cd782d06233a151bb17da771c69c1037d41")]
 [assembly: System.Reflection.AssemblyProductAttribute("Polarisbloc_SecurityForce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Polarisbloc_SecurityForce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.1.0.0")]

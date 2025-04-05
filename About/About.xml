@@ -19,6 +19,9 @@
       <downloadUrl>https://github.com/VaniatD/Polarisbloc-Mods-Pack</downloadUrl>
     </li>
   </modDependencies>
+  <incompatibleWith>
+    <li>Vanya.Polarisbloc.SecurityForce</li>
+  </incompatibleWith>
   <loadAfter>
     <li>Vanya.Polarisbloc.CoreLab</li>
     <li>Vanya.Polarisbloc.CoreLab.tmp</li>

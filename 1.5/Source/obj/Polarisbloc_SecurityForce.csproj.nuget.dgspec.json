@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/lisanhu/mine/workspace/rimworld/RimWorld/Mods/Polarisbloc - Security Force/1.5/Source/Polarisbloc_SecurityForce.csproj": {}
+    "/home/lisanhu/mine/workspace/rimworld/Mods/rimworld-SecurityForce/1.5/Source/Polarisbloc_SecurityForce.csproj": {}
   },
   "projects": {
-    "/home/lisanhu/mine/workspace/rimworld/RimWorld/Mods/Polarisbloc - Security Force/1.5/Source/Polarisbloc_SecurityForce.csproj": {
+    "/home/lisanhu/mine/workspace/rimworld/Mods/rimworld-SecurityForce/1.5/Source/Polarisbloc_SecurityForce.csproj": {
       "version": "0.1.0",
       "restore": {
-        "projectUniqueName": "/home/lisanhu/mine/workspace/rimworld/RimWorld/Mods/Polarisbloc - Security Force/1.5/Source/Polarisbloc_SecurityForce.csproj",
+        "projectUniqueName": "/home/lisanhu/mine/workspace/rimworld/Mods/rimworld-SecurityForce/1.5/Source/Polarisbloc_SecurityForce.csproj",
         "projectName": "Polarisbloc_SecurityForce",
-        "projectPath": "/home/lisanhu/mine/workspace/rimworld/RimWorld/Mods/Polarisbloc - Security Force/1.5/Source/Polarisbloc_SecurityForce.csproj",
+        "projectPath": "/home/lisanhu/mine/workspace/rimworld/Mods/rimworld-SecurityForce/1.5/Source/Polarisbloc_SecurityForce.csproj",
         "packagesPath": "/home/lisanhu/.nuget/packages/",
-        "outputPath": "/home/lisanhu/mine/workspace/rimworld/RimWorld/Mods/Polarisbloc - Security Force/1.5/Source/obj/",
+        "outputPath": "/home/lisanhu/mine/workspace/rimworld/Mods/rimworld-SecurityForce/1.5/Source/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lisanhu/.nuget/NuGet/NuGet.Config"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -57,7 +62,7 @@
               "version": "[10.*, )"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/lisanhu/.dotnet/sdk/8.0.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/lisanhu/.dotnet/sdk/8.0.405/RuntimeIdentifierGraph.json"
         }
       }
     }
