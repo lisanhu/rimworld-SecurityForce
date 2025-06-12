@@ -101,10 +101,10 @@ public class CaniculaBullet : Bullet
 					}
 				}
 			}
-			if (Rand.Chance(def.projectile.bulletChanceToStartFire) && (val3 == null || Rand.Chance(FireUtility.ChanceToAttachFireFromEvent((Thing)(object)val3))))
-			{
-				FireUtility.TryAttachFire(hitThing, def.projectile.bulletFireSizeRange.RandomInRange, launcher);
-			}
+			// if (Rand.Chance(def.projectile.bulletChanceToStartFire) && (val3 == null || Rand.Chance(FireUtility.ChanceToAttachFireFromEvent((Thing)(object)val3))))
+			// {
+			// 	FireUtility.TryAttachFire(hitThing, def.projectile.bulletFireSizeRange.RandomInRange, launcher);
+			// }
 			return;
 		}
 		if (!blockedByShield)
@@ -119,10 +119,10 @@ public class CaniculaBullet : Bullet
 				FleckMaker.Static(ExactPosition, map, FleckDefOf.ShotHit_Dirt, 1f);
 			}
 		}
-		if (Rand.Chance(def.projectile.bulletChanceToStartFire))
-		{
-			FireUtility.TryStartFireIn(Position, map, (def.projectile.bulletFireSizeRange).RandomInRange, launcher);
-		}
+		// if (Rand.Chance(def.projectile.bulletChanceToStartFire))
+		// {
+		// 	FireUtility.TryStartFireIn(Position, map, (def.projectile.bulletFireSizeRange).RandomInRange, launcher);
+		// }
 	}
 
 	private void NotifyImpact(Thing hitThing, Map map, IntVec3 position)

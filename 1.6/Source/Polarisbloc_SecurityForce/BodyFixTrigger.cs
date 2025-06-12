@@ -11,7 +11,7 @@ public class BodyFixTrigger : Apparel
 	public override void Notify_Equipped(Pawn pawn)
 	{
 		base.Notify_Equipped(pawn);
-		if (Wearer.kindDef == PawnKindDefOf.WildMan || (Wearer).Faction == null || Wearer.kindDef.defaultFactionType != PSFDefOf.Polaribloc_SecuirityForce)
+		if (Wearer.kindDef == PawnKindDefOf.WildMan || (Wearer).Faction == null || Wearer.kindDef.defaultFactionDef != PSFDefOf.Polaribloc_SecuirityForce)
 		{
 			Destroy((DestroyMode)0);
 		}

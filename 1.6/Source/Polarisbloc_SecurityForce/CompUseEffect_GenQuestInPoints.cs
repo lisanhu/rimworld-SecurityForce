@@ -48,7 +48,7 @@ public class CompUseEffect_GenQuestInPoints : CompUseEffect
 		}
 		val.Set<float>("points", num, false);
 		val.Set<Map>("map", ((Thing)usedBy).Map, false);
-		if (!Props.quest.CanRun(val))
+		if (!Props.quest.CanRun(val, usedBy.Map))
 		{
 			Map mapHeld = ((Thing)usedBy).MapHeld;
 			List<Thing> list = ThingSetMakerDefOf.VisitorGift.root.Generate();
