@@ -25,6 +25,7 @@
 	  <PackageReference Include="UnlimitedHugs.Rimworld.HugsLib" Version="10.*" />
     <Reference Include="Polarisbloc">
       <HintPath>Polarisbloc.dll</HintPath>
+	  <Private>False</Private>
     </Reference>
 	</ItemGroup>
 </Project>
