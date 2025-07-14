@@ -4,7 +4,7 @@
   <!-- EN: polaris - IV shield belt -->
   <Apparel_PolarisShieldBelt_IV.label>北极星IV型护盾腰带</Apparel_PolarisShieldBelt_IV.label>
   <!-- EN: The latest generation of shield from the Polarisbloc, only for important personnel.\n\nThe shield will counter attack the attacker if the wearer is attacked. Although the counterattack have a cooling time, be careful, the counterattack is very precise. -->
-  <Apparel_PolarisShieldBelt_IV.description>天轴集团最新一代的护盾，只为重要人员配备。\n\n这个护盾会在受到攻击时对攻击者进行反击。虽然反击有间隔，但是仍要小心，反击是非常精准的。</Apparel_PolarisShieldBelt_IV.description>
+  <Apparel_PolarisShieldBelt_IV.description>天轴集团最新一代的护盾，只为重要人员配备。\n\n这个护盾会在受到攻击时对攻击者进行反击。虽然反击有间隔，但是仍要小心，反击是非常精准的。它还提供了真空中的完全防护。</Apparel_PolarisShieldBelt_IV.description>
   
   <!-- EN: Alkaid strategy assistant -->
   <Polarisbloc_AlkaidStrategyAssistant.label>摇光战术助理</Polarisbloc_AlkaidStrategyAssistant.label>
@@ -19,7 +19,7 @@
   <!-- EN: cygnus standard armor -->
   <Polarisbloc_CygnusStandardArmor.label>天鹅座制式装甲</Polarisbloc_CygnusStandardArmor.label>
   <!-- EN: The standard Cygnus armor of Security Forces provides a small amount of defensive capabilities and combat attributes. -->
-  <Polarisbloc_CygnusStandardArmor.description>安保部队的标准制式装甲，仅提供了少量的防御能力和战斗属性加成。</Polarisbloc_CygnusStandardArmor.description>
+  <Polarisbloc_CygnusStandardArmor.description>安保部队的标准制式装甲，仅提供了少量的防御能力和战斗属性加成，和有限的一点真空防护。</Polarisbloc_CygnusStandardArmor.description>
   
   <!-- EN: cygnus standard armor (captain) -->
   <Polarisbloc_CygnusStandardArmorC.label>天鹅座制式装甲（指挥官）</Polarisbloc_CygnusStandardArmorC.label>
@@ -29,7 +29,7 @@
   <!-- EN: cygnus standard tights -->
   <Polarisbloc_CygnusStandardTights.label>天鹅座制式紧身衣</Polarisbloc_CygnusStandardTights.label>
   <!-- EN: The Cygnus tights made of polymer materials contain special life-sustaining devices that can treat the user's wounds in time and promote wound healing. -->
-  <Polarisbloc_CygnusStandardTights.description>使用高分子材料制作的紧身衣，包含有特殊的生命维持装置，能够及时处理使用者的伤口，促进伤口愈合。</Polarisbloc_CygnusStandardTights.description>
+  <Polarisbloc_CygnusStandardTights.description>使用高分子材料制作的紧身衣，包含有特殊的生命维持装置，能够及时处理使用者的伤口，促进伤口愈合。它还提供了一定的真空防护。</Polarisbloc_CygnusStandardTights.description>
   
   <!-- EN: Thuban tactical goggles -->
   <Polarisbloc_ThubanTacticalGoggles.label>右枢战术目镜</Polarisbloc_ThubanTacticalGoggles.label>

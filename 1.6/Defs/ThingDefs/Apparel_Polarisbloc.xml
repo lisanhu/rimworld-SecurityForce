@@ -72,7 +72,7 @@
   <ThingDef ParentName="PolarisblocApparelBase">
     <defName>Apparel_PolarisShieldBelt_IV</defName>
     <label>polaris - IV shield belt</label>
-    <description>The latest generation of shield from the Polarisbloc, only for important personnel.\n\nThe shield will counter attack the attacker if the wearer is attacked. Although the counterattack have a cooling time, be careful, the counterattack is very precise.</description>
+    <description>The latest generation of shield from the Polarisbloc, only for important personnel.\n\nThe shield will counter attack the attacker if the wearer is attacked. Although the counterattack have a cooling time, be careful, the counterattack is very precise. It provides full vacuum life support.</description>
     <thingClass>Polarisbloc_SecurityForce.PolarisShieldBelt_IV</thingClass>
     <graphicData>
       <texPath>PolarisblocSF/Apparel/PolarisShieldBelt_IV</texPath>
@@ -88,6 +88,9 @@
       <Flammability>0</Flammability>
       <EquipDelay>2</EquipDelay>
     </statBases>
+    <equippedStatOffsets>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">1.00</VacuumResistance>
+    </equippedStatOffsets>
     <thingCategories>
       <li>ApparelUtility</li>
     </thingCategories>
@@ -117,7 +120,7 @@
   <ThingDef ParentName="PolarisblocApparelMakeableBase">
     <defName>Polarisbloc_CygnusStandardArmor</defName>
     <label>cygnus standard armor</label>
-    <description>The standard Cygnus armor of Security Forces provides a small amount of defensive capabilities and combat attributes.</description>
+    <description>The standard Cygnus armor of Security Forces provides a small amount of defensive capabilities and combat attributes, very limited vacuum support.</description>
     <!--<thingClass>Polarisbloc_SecurityForce.CygnusStandardArmor</thingClass>-->
     <thingCategories>
       <li>ApparelArmor</li>
@@ -147,6 +150,7 @@
       <MeleeDodgeChance>2</MeleeDodgeChance>
       <Vanya_MeleeCooldownFactor MayRequire="Vanya.Tools.CombatTweak">-0.05</Vanya_MeleeCooldownFactor>
       <Vanya_RangedCooldownFactor MayRequire="Vanya.Tools.CombatTweak">-0.05</Vanya_RangedCooldownFactor>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.26</VacuumResistance>
     </equippedStatOffsets>
     <generateCommonality>0.4</generateCommonality>
     <apparel>
@@ -208,6 +212,7 @@
       <MeleeDodgeChance>2.5</MeleeDodgeChance>
       <Vanya_MeleeCooldownFactor MayRequire="Vanya.Tools.CombatTweak">-0.05</Vanya_MeleeCooldownFactor>
       <Vanya_RangedCooldownFactor MayRequire="Vanya.Tools.CombatTweak">-0.05</Vanya_RangedCooldownFactor>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.26</VacuumResistance>
     </equippedStatOffsets>
     <generateCommonality>0.4</generateCommonality>
     <apparel>
@@ -235,7 +240,7 @@
   <ThingDef ParentName="PolarisblocApparelMakeableBase">
     <defName>Polarisbloc_CygnusStandardTights</defName>
     <label>cygnus standard tights</label>
-    <description>The Cygnus tights made of polymer materials contain special life-sustaining devices that can treat the user's wounds in time and promote wound healing.</description>
+    <description>The Cygnus tights made of polymer materials contain special life-sustaining devices that can treat the user's wounds in time and promote wound healing. It also provides certain level of vacuum support.</description>
     <!--<thingClass>Polarisbloc_SecurityForce.CygnusStandardTights</thingClass>-->
     <thingCategories>
       <li>Apparel</li>
@@ -265,6 +270,7 @@
       <ToxicEnvironmentResistance>0.8</ToxicEnvironmentResistance>
       <Vanya_MeleeCooldownFactor MayRequire="Vanya.Tools.CombatTweak">-0.03</Vanya_MeleeCooldownFactor>
       <Vanya_RangedCooldownFactor MayRequire="Vanya.Tools.CombatTweak">-0.03</Vanya_RangedCooldownFactor>
+      <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.75</VacuumResistance>
     </equippedStatOffsets>
     <generateCommonality>0.4</generateCommonality>
     <apparel>

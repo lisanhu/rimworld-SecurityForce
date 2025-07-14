@@ -4,7 +4,7 @@
   <!-- EN: polaris - IV shield belt -->
   <Apparel_PolarisShieldBelt_IV.label>北極星IV型護盾腰帶</Apparel_PolarisShieldBelt_IV.label>
   <!-- EN: The latest generation of shield from the Polarisbloc, only for important personnel.\n\nThe shield will counter attack the attacker if the wearer is attacked. Although the counterattack have a cooling time, be careful, the counterattack is very precise. -->
-  <Apparel_PolarisShieldBelt_IV.description>天軸集團最新一代的護盾，只為重要人員配備。\n\n這個護盾會在受到攻擊時對攻擊者進行反擊。雖然反擊有間隔，但是仍要小心，反擊是非常精準的。</Apparel_PolarisShieldBelt_IV.description>
+  <Apparel_PolarisShieldBelt_IV.description>天軸集團最新一代的護盾，只為重要人員配備。\n\n這個護盾會在受到攻擊時對攻擊者進行反擊。雖然反擊有間隔，但是仍要小心，反擊是非常精準的。它還提供了真空中的完全防護。</Apparel_PolarisShieldBelt_IV.description>
   
   <!-- EN: Alkaid strategy assistant -->
   <Polarisbloc_AlkaidStrategyAssistant.label>搖光戰術助理</Polarisbloc_AlkaidStrategyAssistant.label>
@@ -29,7 +29,7 @@
   <!-- EN: cygnus standard tights -->
   <Polarisbloc_CygnusStandardTights.label>天鵝座制式緊身衣</Polarisbloc_CygnusStandardTights.label>
   <!-- EN: The Cygnus tights made of polymer materials contain special life-sustaining devices that can treat the user's wounds in time and promote wound healing. -->
-  <Polarisbloc_CygnusStandardTights.description>使用高分子材料製作的緊身衣，包含有特殊的生命維持裝置，能夠及時處理使用者的傷口，促進傷口愈合。</Polarisbloc_CygnusStandardTights.description>
+  <Polarisbloc_CygnusStandardTights.description>使用高分子材料製作的緊身衣，包含有特殊的生命維持裝置，能夠及時處理使用者的傷口，促進傷口愈合。它還提供了一定的真空防護。</Polarisbloc_CygnusStandardTights.description>
   
   <!-- EN: Thuban tactical goggles -->
   <Polarisbloc_ThubanTacticalGoggles.label>右樞戰術目鏡</Polarisbloc_ThubanTacticalGoggles.label>
