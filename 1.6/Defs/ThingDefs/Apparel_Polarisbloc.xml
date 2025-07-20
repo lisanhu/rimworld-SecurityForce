@@ -169,10 +169,10 @@
 			<wornGraphicPath>PolarisblocSF/Apparel/CygnusStandardArmor/CygnusStandardArmor</wornGraphicPath>
 			<drawData>
 				<dataNorth>
-					<offset>(0.03, 0, 0)</offset>
+					<offset>(0.025, 0, 0)</offset>
 				</dataNorth>
 				<dataSouth>
-					<offset>(0.03, 0, 0)</offset>
+					<offset>(0.025, 0, 0)</offset>
 				</dataSouth>
 			</drawData>
 			<layers>
@@ -240,10 +240,10 @@
 			<wornGraphicPath>PolarisblocSF/Apparel/CygnusStandardArmorC/CygnusStandardArmorC</wornGraphicPath>
 			<drawData>
 				<dataNorth>
-					<offset>(0.03, 0, 0)</offset>
+					<offset>(0.02, 0, 0)</offset>
 				</dataNorth>
 				<dataSouth>
-					<offset>(0.03, 0, 0)</offset>
+					<offset>(0.02, 0, 0)</offset>
 				</dataSouth>
 			</drawData>
 			<layers>
@@ -311,10 +311,10 @@
 			<wornGraphicPath>PolarisblocSF/Apparel/CygnusStandardTights/CygnusStandardTights</wornGraphicPath>
 			<drawData>
 				<dataNorth>
-					<offset>(0.02, 0, 0)</offset>
+					<offset>(0.03, 0, 0)</offset>
 				</dataNorth>
 				<dataSouth>
-					<offset>(0.02, 0, 0)</offset>
+					<offset>(0.03, 0, 0)</offset>
 				</dataSouth>
 			</drawData>
 			<layers>
