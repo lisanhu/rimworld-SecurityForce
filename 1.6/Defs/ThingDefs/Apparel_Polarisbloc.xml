@@ -460,6 +460,14 @@
 		<generateCommonality>0.4</generateCommonality>
 		<apparel>
 			<wornGraphicPath>PolarisblocSF/Apparel/ThubanTacticalGoggles/ThubanTacticalGoggles</wornGraphicPath>
+			<drawData>
+				<dataNorth>
+					<offset>(0.025, 0, 0)</offset>
+				</dataNorth>
+				<dataSouth>
+					<offset>(0.01, 0, 0)</offset>
+				</dataSouth>
+			</drawData>
 			<bodyPartGroups>
 				<li>FullHead</li>
 			</bodyPartGroups>
