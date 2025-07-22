@@ -311,10 +311,10 @@
 			<wornGraphicPath>PolarisblocSF/Apparel/CygnusStandardTights/CygnusStandardTights</wornGraphicPath>
 			<drawData>
 				<dataNorth>
-					<offset>(0.03, 0, 0)</offset>
+					<offset>(0.022, 0, 0)</offset>
 				</dataNorth>
 				<dataSouth>
-					<offset>(0.03, 0, 0)</offset>
+					<offset>(0.022, 0, 0)</offset>
 				</dataSouth>
 			</drawData>
 			<layers>
