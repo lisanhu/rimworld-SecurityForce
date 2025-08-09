@@ -10,53 +10,59 @@ public class CaniculaBullet : Bullet
 {
 	private void RefDinfo(ref DamageInfo dinfo, Thing hitThing)
 	{
-		//IL_013f: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0155: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0157: Unknown result type (might be due to invalid IL or missing references)
-		//IL_0159: Unknown result type (might be due to invalid IL or missing references)
+		// Ignore protection and armor for this projectile
 		dinfo.SetIgnoreInstantKillProtection(true);
 		dinfo.SetIgnoreArmor(true);
-		Pawn val = (Pawn)(object)((hitThing is Pawn) ? hitThing : null);
-		if (val == null)
+
+		// Only pawns get special handling (and the EMP tick)
+		Pawn pawn = hitThing as Pawn;
+		if (pawn == null)
 		{
 			return;
 		}
-		if (val != null)
+
+		// Bonus damage to insectoids
+		if (pawn.RaceProps.FleshType == FleshTypeDefOf.Insectoid)
 		{
-			if (val.RaceProps.FleshType == FleshTypeDefOf.Insectoid)
+			dinfo.SetAmount(dinfo.Amount * 6f);
+		}
+
+		// Chance to force a brain hit scales with projectile damage
+		BodyPartRecord brain = pawn.health.hediffSet.GetBrain();
+		if (brain != null)
+		{
+			float dmg = DamageAmount;
+			float chance;
+			if (dmg <= 6.9f) chance = 0.05f;
+			else if (dmg <= 8f) chance = 0.10f;
+			else if (dmg <= 10f) chance = 0.15f;
+			else if (dmg <= 13f) chance = 0.20f;
+			else if (dmg <= 15f) chance = 0.25f;
+			else if (dmg <= 19f) chance = 0.30f;
+			else chance = 0.35f;
+
+			if (Rand.Chance(chance))
 			{
-				dinfo.SetAmount(dinfo.Amount * 6f);
-			}
-			BodyPartRecord brain = val.health.hediffSet.GetBrain();
-			if (brain != null)
-			{
-				float num = 0f;
-				num = (((float)DamageAmount <= 6.9f) ? 0.05f : (((float)DamageAmount <= 8f) ? 0.1f : (((float)DamageAmount <= 10f) ? 0.15f : (((float)DamageAmount <= 13f) ? 0.2f : (((float)DamageAmount <= 15f) ? 0.25f : ((!((float)DamageAmount <= 19f)) ? 0.35f : 0.3f))))));
-				if (Rand.Chance(num))
-				{
-					dinfo.SetHitPart(brain);
-				}
-			}
-			if (ModsConfig.IdeologyActive)
-			{
-				Thing launcher = Launcher;
-				Pawn val2 = (Pawn)(object)((launcher is Pawn) ? launcher : null);
-				if (val2 != null)
-				{
-					Pawn_EquipmentTracker equipment = val2.equipment;
-					Thing val3 = (Thing)(object)((equipment != null) ? equipment.Primary : null);
-					if (val3 != null && ReliquaryUtility.IsRelic(val3))
-					{
-						dinfo.SetHitPart(brain);
-					}
-				}
+				dinfo.SetHitPart(brain);
 			}
 		}
-		DamageInfo val4 = default(DamageInfo);
-		val4 = new DamageInfo(dinfo);
-		val4.Def = DamageDefOf.EMP;
-		DamageInfo val5 = val4;
-		hitThing.TakeDamage(val5);
+
+		// Relic primaries force a brain hit when Ideology is active
+		if (ModsConfig.IdeologyActive)
+		{
+            if (Launcher is Pawn shooter)
+            {
+                Thing primary = shooter.equipment?.Primary;
+                if (primary != null && ReliquaryUtility.IsRelic(primary))
+                {
+                    dinfo.SetHitPart(brain);
+                }
+            }
+        }
+
+		// Extra EMP tick based on final DamageInfo
+		DamageInfo emp = new(dinfo) { Def = DamageDefOf.EMP };
+		hitThing.TakeDamage(emp);
 	}
 
 	protected override void Impact(Thing hitThing, bool blockedByShield = false)
@@ -112,7 +118,7 @@ public class CaniculaBullet : Bullet
 			SoundStarter.PlayOneShot(SoundDefOf.BulletImpact_Ground, (new TargetInfo(Position, map, false)));
 			if (GridsUtility.GetTerrain(Position, map).takeSplashes)
 			{
-				FleckMaker.WaterSplash(ExactPosition, map, Mathf.Sqrt((float)DamageAmount) * 1f, 4f);
+				FleckMaker.WaterSplash(ExactPosition, map, Mathf.Sqrt(DamageAmount) * 1f, 4f);
 			}
 			else
 			{
